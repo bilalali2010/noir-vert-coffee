@@ -1,0 +1,141 @@
+.footer {
+  background: #05100b;
+  border-top: 1px solid var(--c-line);
+  padding: clamp(3.5rem, 8vw, 6rem) 0 2rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.footer-brand h2 {
+  font-size: 2rem;
+  color: var(--c-cream);
+}
+
+.footer-brand p {
+  margin-top: 0.6rem;
+  opacity: 0.6;
+  max-width: 30ch;
+}
+
+.footer-newsletter {
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 0.7rem;
+  max-width: 380px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  background: rgba(246, 242, 232, 0.04);
+  border: 1px solid var(--c-glass-border);
+  border-radius: 999px;
+  padding: 0.75rem 1.1rem;
+  font-size: 0.9rem;
+}
+
+.footer-newsletter input:focus {
+  outline: none;
+  border-color: var(--c-gold);
+}
+
+.footer-newsletter .btn {
+  padding: 0.75rem 1.4rem;
+  white-space: nowrap;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-col h3 {
+  font-family: var(--f-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+  margin-bottom: 1.1rem;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.footer-col a {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: opacity var(--dur-fast);
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: var(--c-gold);
+}
+
+.footer-bottom {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--c-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  opacity: 0.55;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.footer-socials a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--c-glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--dur-fast), transform var(--dur-fast);
+}
+
+.footer-socials a:hover {
+  border-color: var(--c-gold);
+  transform: translateY(-3px);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+@media (max-width: 800px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+  .footer-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem 1rem;
+  }
+  .footer-newsletter {
+    flex-direction: column;
+  }
+}

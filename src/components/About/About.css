@@ -1,0 +1,129 @@
+.about {
+  background: linear-gradient(180deg, var(--c-bg) 0%, var(--c-bg-soft) 100%);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.about-media {
+  position: relative;
+}
+
+.about-media-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--c-glass-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.about-media-image {
+  position: absolute;
+  inset: -6% -6%;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(217, 182, 111, 0.25), transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(46, 139, 87, 0.35), transparent 55%),
+    linear-gradient(160deg, #10261c, #060c09);
+}
+
+.about-media-badge {
+  position: absolute;
+  bottom: -1.4rem;
+  right: -1.4rem;
+  padding: 1rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.about-media-badge span {
+  font-size: var(--fs-small);
+  opacity: 0.7;
+}
+
+.about-media-badge strong {
+  font-family: var(--f-display);
+  font-size: 1.5rem;
+  color: var(--c-gold);
+}
+
+.about-copy h2 {
+  margin-top: 0.8rem;
+}
+
+.about-lead {
+  margin-top: 1.2rem;
+  max-width: 52ch;
+  opacity: 0.75;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 2.4rem 0;
+  padding: 1.6rem 0;
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+}
+
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.about-stat-value {
+  font-family: var(--f-display);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  color: var(--c-gold);
+}
+
+.about-stat-label {
+  font-size: 0.78rem;
+  opacity: 0.65;
+  letter-spacing: 0.02em;
+}
+
+.about-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-timeline li {
+  display: flex;
+  gap: 1.2rem;
+  align-items: baseline;
+  padding-left: 1.2rem;
+  border-left: 1px solid var(--c-glass-border);
+}
+
+.about-timeline-year {
+  font-family: var(--f-display);
+  color: var(--c-emerald);
+  min-width: 3.5rem;
+}
+
+.about-timeline-text {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-media-badge {
+    right: 1rem;
+  }
+}
